@@ -1,0 +1,213 @@
+/* TechWebPe — hoja de estilo única. Sin dependencias externas. */
+
+:root {
+  --papel: #f1f4f2;
+  --tinta: #16211f;
+  --tinta-suave: #55625e;
+  --regla: #d3dad6;
+  --acento: #0b6e63;
+  --medida: 34rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0 1.5rem 5rem;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: Iowan Old Style, Palatino Linotype, Palatino, Georgia, serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+.hoja {
+  max-width: var(--medida);
+  margin: 0 auto;
+  padding-top: 5.5rem;
+}
+
+.marca {
+  margin: 0 0 3.25rem;
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  color: var(--tinta-suave);
+}
+
+.marca b {
+  font-weight: 600;
+  color: var(--tinta);
+}
+
+h1 {
+  margin: 0 0 1.75rem;
+  font-size: clamp(1.75rem, 5.5vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.012em;
+  max-width: 22ch;
+}
+
+h2 {
+  margin: 3rem 0 0.875rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+p {
+  margin: 0 0 1.15rem;
+}
+
+.entrada {
+  font-size: 1.1875rem;
+  color: var(--tinta-suave);
+}
+
+a {
+  color: var(--acento);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--tinta);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Ficha técnica: pares dato/valor, no decoración */
+.ficha {
+  margin: 3.5rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--regla);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.ficha div {
+  display: flex;
+  gap: 1rem;
+  padding: 0.45rem 0;
+}
+
+.ficha dt {
+  flex: 0 0 9.5rem;
+  color: var(--tinta-suave);
+}
+
+.ficha dd {
+  margin: 0;
+}
+
+.pie {
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--regla);
+  font-size: 0.875rem;
+  color: var(--tinta-suave);
+}
+
+.pie a + a {
+  margin-left: 1.25rem;
+}
+
+ul {
+  margin: 0 0 1.15rem;
+  padding-left: 1.15rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 30rem) {
+  .hoja {
+    padding-top: 3.5rem;
+  }
+
+  .ficha div {
+    display: block;
+  }
+
+  .ficha dt {
+    margin-bottom: 0.1rem;
+  }
+}
+
+/* --- Gráfico y datos de la página de cierre --- */
+
+.grafico {
+  margin: 2.5rem 0 2.75rem;
+}
+
+.grafico svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.grafico figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--tinta-suave);
+}
+
+.barra {
+  fill: var(--acento);
+}
+
+.eje {
+  stroke: var(--regla);
+  stroke-width: 1;
+}
+
+.rotulo {
+  fill: #55625e;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.cifras {
+  margin: 2.25rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--regla);
+  border-bottom: 1px solid var(--regla);
+}
+
+.cifras div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  font-size: 0.9375rem;
+}
+
+.cifras dt {
+  color: var(--tinta-suave);
+}
+
+.cifras dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.firma {
+  margin-top: 3rem;
+  font-size: 0.9375rem;
+  color: var(--tinta-suave);
+}
