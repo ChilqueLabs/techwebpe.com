@@ -308,3 +308,114 @@ li {
     text-align: left;
   }
 }
+
+/* --- Acciones y formulario de contacto --- */
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.5rem 0 0;
+}
+
+.acciones .llamado {
+  margin: 0;
+}
+
+.llamado.secundario {
+  background: transparent;
+  color: var(--acento);
+  border: 1px solid var(--acento);
+}
+
+.llamado.secundario:hover {
+  background: var(--acento);
+  color: #ffffff;
+}
+
+.contacto {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--regla);
+}
+
+.contacto h2 {
+  margin-top: 0;
+}
+
+.contacto form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto label {
+  margin: 1rem 0 0.3rem;
+  font-size: 0.9375rem;
+}
+
+.contacto .opcional {
+  color: var(--tinta-suave);
+}
+
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--tinta);
+  background: #ffffff;
+  border: 1px solid var(--regla);
+  border-radius: 3px;
+}
+
+.contacto input:focus-visible,
+.contacto textarea:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 1px;
+  border-color: var(--acento);
+}
+
+.contacto .cf-turnstile {
+  margin-top: 1.25rem;
+}
+
+.contacto button.llamado {
+  align-self: flex-start;
+  margin-top: 1.25rem;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.contacto button.llamado:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.trampa {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.estado {
+  min-height: 1.5rem;
+  margin: 1rem 0 0;
+  font-size: 0.9375rem;
+}
+
+.estado.exito {
+  color: var(--acento);
+}
+
+.estado.error {
+  color: #a3312a;
+}
+
+.nota {
+  font-size: 0.875rem;
+  color: var(--tinta-suave);
+}
