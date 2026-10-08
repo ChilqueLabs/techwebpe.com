@@ -168,6 +168,9 @@ a:focus-visible, .boton:focus-visible { outline: 3px solid var(--cielo-claro); o
 
 .portada.corta .contenedor { padding-bottom: 3.5rem; }
 
+.modalidad { display: inline-block; margin-bottom: 0.75rem; padding: 0.15rem 0.6rem; border-radius: 999px; background: #e3eef7; color: #1d5684; font-size: 0.78rem; font-weight: 600; }
+.modalidad.presencial { background: var(--sillar); color: #5a5143; }
+
 /* Páginas de texto (política de privacidad) */
 .documento { max-width: 44rem; margin: 0 auto; padding: 3.5rem 2rem 4.5rem; }
 .documento h1 { margin: 0 0 1rem; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; line-height: 1.15; }
