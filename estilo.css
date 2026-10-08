@@ -157,6 +157,17 @@ a:focus-visible, .boton:focus-visible { outline: 3px solid var(--cielo-claro); o
   .final .contenedor { padding-top: 2.25rem; padding-bottom: 2.25rem; }
 }
 
+/* Enlace a otros servicios */
+.menu a.menu-destacado { color: var(--cielo-claro); font-weight: 600; }
+.otros { background: var(--blanco); border-top: 1px solid var(--regla); }
+.otros .contenedor { display: flex; align-items: center; justify-content: space-between; gap: 1rem 2rem; flex-wrap: wrap; padding-top: 2rem; padding-bottom: 2rem; }
+.otros p { margin: 0; flex: 1 1 28rem; color: var(--tinta-suave); }
+.otros b { color: var(--tinta); }
+.enlace-flecha { font-weight: 700; color: var(--cielo); text-decoration: none; white-space: nowrap; }
+.enlace-flecha:hover { text-decoration: underline; }
+
+.portada.corta .contenedor { padding-bottom: 3.5rem; }
+
 /* Páginas de texto (política de privacidad) */
 .documento { max-width: 44rem; margin: 0 auto; padding: 3.5rem 2rem 4.5rem; }
 .documento h1 { margin: 0 0 1rem; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; line-height: 1.15; }
