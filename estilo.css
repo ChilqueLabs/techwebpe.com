@@ -40,7 +40,7 @@ a:focus-visible, .boton:focus-visible { outline: 3px solid var(--cielo-claro); o
 .nota { margin: 0.9rem 0 0; color: #8f9aa2; font-size: 0.9rem; }
 
 .franja { background: var(--sillar); }
-.cifras { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--sillar-borde); border-radius: 14px; overflow: hidden; transform: translateY(-2.25rem); box-shadow: 0 6px 20px rgba(43, 49, 54, 0.12); }
+.cifras { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--sillar-borde); border-radius: 14px; overflow: hidden; transform: translateY(-2.25rem); box-shadow: 0 6px 20px rgba(43, 49, 54, 0.12); }
 .cifras div { background: var(--blanco); padding: 1.25rem 1.5rem; }
 .cifras dt { font-size: 0.9rem; color: var(--tinta-suave); }
 .cifras dd { margin: 0.2rem 0 0; font-size: 1.3rem; font-weight: 700; }
@@ -95,7 +95,7 @@ a:focus-visible, .boton:focus-visible { outline: 3px solid var(--cielo-claro); o
 .libertad li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--cielo); font-weight: 800; }
 .libertad b { display: block; color: var(--tinta); margin-bottom: 0.15rem; }
 .tabla-dominios th small { display: block; font-weight: 500; font-size: 0.8rem; color: #8a949b; }
-.tabla-dominios td.hoy { color: #8a949b; text-decoration: line-through; white-space: nowrap; }
+.tabla-dominios td.hoy { color: #8a949b; white-space: nowrap; }
 .transferencia { margin: 1.5rem 0 0; max-width: 50rem; padding: 1rem 1.25rem; border: 1px dashed var(--regla); border-radius: 12px; font-size: 0.975rem; color: var(--tinta-suave); }
 .transferencia b { color: var(--tinta); }
 .consideraciones { background: var(--gris-claro); }
@@ -126,6 +126,36 @@ a:focus-visible, .boton:focus-visible { outline: 3px solid var(--cielo-claro); o
   .sin-etiqueta { padding-top: 0; }
 }
 @media (max-width: 30rem) { .contenedor { padding: 0 1.25rem; } }
+
+/* Celular: tabla de dominios como tarjetas y ajustes de espacio */
+.etq { display: none; }
+@media (max-width: 40rem) {
+  .portada .misti { display: none; }
+  .portada .contenedor { padding-top: 2.25rem; padding-bottom: 4rem; }
+  .seccion { padding: 2.75rem 0; }
+  .franja .seccion { padding-top: 0.75rem; }
+  .tarjeta { padding: 1.25rem; }
+  .cifras div { padding: 0.9rem 1.1rem; }
+  .cifras dd { font-size: 1.15rem; }
+  .tabla-dominios thead { display: none; }
+  .tabla-dominios, .tabla-dominios tbody { display: block; }
+  .tabla-dominios tr { display: grid; grid-template-columns: 1fr auto; column-gap: 1rem; row-gap: 0.15rem; padding: 0.9rem 1.1rem; border-bottom: 1px solid #ebe8e2; }
+  .tabla-dominios tr:last-child { border-bottom: 0; }
+  .tabla-dominios td { padding: 0; border: 0; }
+  .tabla-dominios td:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .tabla-dominios td:nth-child(2) { grid-column: 1; grid-row: 2; font-size: 0.875rem; }
+  .tabla-dominios td:nth-child(3) { grid-column: 2; grid-row: 1 / span 2; text-align: right; align-self: center; }
+  .tabla-dominios td:nth-child(4) { grid-column: 1 / -1; grid-row: 3; margin-top: 0.35rem; font-size: 0.85rem; color: var(--tinta-suave); }
+  .etq { display: inline; }
+  .tabla-dominios tr { grid-template-columns: minmax(0, 1fr) minmax(0, 8.5rem); }
+  .tabla-dominios td.precio-dom { white-space: normal; }
+  .tabla-dominios tr.pe { background: #f7f5f1; }
+  .tabla-dominios tr.pe td { background: transparent; }
+  .ahorro-total { padding: 1.25rem; }
+  .web-caja { padding: 1.25rem; }
+  .libertad { padding: 1.25rem; }
+  .final .contenedor { padding-top: 2.25rem; padding-bottom: 2.25rem; }
+}
 
 /* Páginas de texto (política de privacidad) */
 .documento { max-width: 44rem; margin: 0 auto; padding: 3.5rem 2rem 4.5rem; }
